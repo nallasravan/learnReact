@@ -1,19 +1,33 @@
+import axios from "axios"
 import { useEffect, useState } from "react"
 
 export function Useeffect(){
 
     const[count, setcount] = useState(2)
-    const[data, setdata] = useState([])
+    const[store, setstore] = useState([])
 
-    function load(){
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then(response=>response.json())
-        .then(data=>{
-      console.log("data=", data)
-      setdata(data)
-        })
+    // function load(){
+    //     fetch("https://jsonplaceholder.typicode.com/users")
+    //     .then(response=>response.json())
+    //     .then(data=>{
+    //   console.log("data=", data)// out side console data  is coming using fetchh method
+    //   console.log("datatype=", typeof data)
+    //   setstore(data)
+    //     })
+    //     .catch(error => {
+    //       console.error("Error fetching data:", error);
+    //     }   )
+    // }
+
+    function load(){  
+        axios.get("https://jsonplaceholder.typicode.com/users") 
+        .then(response=>{
+            console.log("response=", response.data)
+            setstore(response.data)
+        }
+        ) 
+
     }
-
     // load()
     useEffect(()=>{
       load()    
@@ -32,11 +46,15 @@ export function Useeffect(){
             <button onClick={Counter}>click me</button>
             <div>countexmaple:{count}</div>
 
-            <div>data===={data}</div>
+            <div>
+           {/* dat={JSON.stringify(store)} */}
 
+           { store?.map((item) => <p key={item.id}>{item.id}:{item.name}</p>)}
 
-
-
+      
+          
+            </div>
+          
 
         </div>
     )
