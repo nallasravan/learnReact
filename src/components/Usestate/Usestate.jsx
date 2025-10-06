@@ -1,25 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export function Usestate() {
+const Usestate = () => {
+    // 👉 useState hook initializes the state variable 'getname' with default value "ram"
     const [getname, setName] = useState("ram");
-    // setName("shravn")
 
+    // 👉 Function to update the state
     function loading() {
-        setName("shravan");
+        setName("shravan"); // Updates 'getname' to "shravan"
     }
 
-    useEffect(() => {
-        // setName("shravn")// This will run once when the component mounts
-    }, []);
-
+    // 👉 JSX rendering
     return (
         <div>
             <div>How useState updates</div>
-
-            {/* Corrected button: pass the function reference, not the result of calling it */}
             <button onClick={loading}>Click</button>
-
             <div>getname: {getname}</div>
         </div>
     );
-}
+};
+
+export default Usestate;
