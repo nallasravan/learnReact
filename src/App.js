@@ -23,8 +23,8 @@ function App() {
 {/* < Settime /> */}
 {/* < SetInterval/> */}
 {/* <Debounce /> */}
-{/* <CaroselDemo /> */}
-<RecatForm />
+<CaroselDemo />
+{/* <RecatForm /> */}
     </div>
     
   );
