@@ -158,7 +158,7 @@ debugger
 
       <div>rendering child component</div>
 
-    <Child backgroundColor="red" cardheader="bathroom" cardbndy="Toilet.png" cardfooter="explore" />
+    {/* <Child backgroundColor="red" cardheader="bathroom" cardbndy="Toilet.png" cardfooter="explore" /> */}
     </div>
   );
 };
