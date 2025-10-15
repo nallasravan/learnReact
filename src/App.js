@@ -18,6 +18,8 @@ import Formvalidation from './components/Forms/Formvalidation';
 import Formfocusout from './components/Forms/formvalidationfocusout';
 import Parent from './components/Controlledcomponents/Parent';
 import Conditional from './components/Controlledcomponents/Conditional';
+import {FetchApi} from './components/FetchApi/FetchApi';
+
 
 
 
@@ -38,7 +40,7 @@ function App() {
 {/* <RecatFormValidation /> */}
 {/* <CarouselDemoHooks /> */}
 {/* < DemouseEffect /> */}
-{/* <ExampleComponent /> */}
+{/* <ExampleComponent />
 {/* <Getapi /> */}
 {/* <Focusout /> */}
 
@@ -49,7 +51,10 @@ function App() {
 
 {/* <Parent /> */}
 
-<Conditional />
+{/* <Conditional /> */}
+
+<FetchApi />
+
 
     </div>
     
