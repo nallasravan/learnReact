@@ -16,6 +16,9 @@ import ExampleComponent from './components/ExampleDemo/ExampleComponent';
 import Forms from './components/Forms/Form';
 import Formvalidation from './components/Forms/Formvalidation';
 import Formfocusout from './components/Forms/formvalidationfocusout';
+import Parent from './components/Controlledcomponents/Parent';
+
+
 
 function App() {
   return (
@@ -41,8 +44,9 @@ function App() {
 {/* <Forms /> */}
 
 {/* <Formvalidation /> */}
-<Formfocusout />
+{/* <Formfocusout /> */}
 
+<Parent />
 
     </div>
     
