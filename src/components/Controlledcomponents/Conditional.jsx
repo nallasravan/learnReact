@@ -1,9 +1,25 @@
 import { useState } from "react";
-import CarouselDemo from "../Debounce/CarouselDemo";  // Assuming this is another component
-import Formfocusout from '../Forms/formvalidationfocusout';
+import CarouselDemo from "../Debounce/CarouselDemo";
+import Formfocusout from "../Forms/formvalidationfocusout";
 
 const Conditional = () => {
-  const [component, setComponent] = useState("CarouselDemo");
+  const [component, setComponent] = useState(<CarouselDemo />);
+
+  function loadComponent(name) {
+    if (name === "CarouselDemo") {
+      setComponent(<CarouselDemo />);
+    } else if (name === "Formfocusout") {
+      setComponent(<Formfocusout />);
+    }
+  }
+
+  function handleCarouselClick() {
+    loadComponent("CarouselDemo");
+  }
+
+  function handleFormValidationClick() {
+    loadComponent("Formfocusout");
+  }
 
   return (
     <div>
@@ -11,24 +27,20 @@ const Conditional = () => {
 
       <button
         className="btn btn-primary m-2 p-3"
-        onClick={() => setComponent("CarouselDemo")}
+        onClick={handleCarouselClick}
       >
         CarouselDemo
       </button>
       <button
         className="btn btn-secondary m-2 p-3"
-        onClick={() => setComponent("Formfocusout")}
+        onClick={handleFormValidationClick}
       >
         FormValidation
       </button>
 
-       {/* <CarouselDemo />
-       <Formfocusout /> */}
-<div>
-       {component === "CarouselDemo" ?  <CarouselDemo /> :  "condition false"}
-       {component === "Formfocusout" ?  <Formfocusout /> :  "condition false"}
-       </div>
-   
+      <div>
+        {component}
+      </div>
     </div>
   );
 };
