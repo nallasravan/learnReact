@@ -4,7 +4,7 @@ const Child = (props) =>{
         <div>
             <h2>child component</h2>
 <div className="container w-50">    
-        <div style={{ backgroundColor: props.backgroundColor }} className="card">
+            <div style={props.backgrondcolor} className="card">
                 <div className="card-header">
                     <div>{props.cardheader}</div>
                 </div>
@@ -19,6 +19,7 @@ const Child = (props) =>{
             </div>
             
             </div>
+
         </div>
     )
 }

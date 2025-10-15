@@ -44,9 +44,9 @@ function App() {
 {/* <Forms /> */}
 
 {/* <Formvalidation /> */}
-{/* <Formfocusout /> */}
+<Formfocusout />
 
-<Parent />
+{/* <Parent /> */}
 
     </div>
     

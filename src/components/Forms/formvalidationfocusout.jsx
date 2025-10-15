@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Child from "../Controlledcomponents/Child";
 
 const Formfocusout = () => {
   const [username, setUsername] = useState("");
@@ -154,6 +155,10 @@ debugger
         <p>Gender: {gender}</p>
         <p>City: {city}</p>
       </div>
+
+      <div>rendering child component</div>
+
+    <Child backgroundColor="red" cardheader="bathroom" cardbndy="Toilet.png" cardfooter="explore" />
     </div>
   );
 };
