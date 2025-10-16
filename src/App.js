@@ -19,6 +19,8 @@ import Formfocusout from './components/Forms/formvalidationfocusout';
 import Parent from './components/Controlledcomponents/Parent';
 import Conditional from './components/Controlledcomponents/Conditional';
 import {FetchApi} from './components/FetchApi/FetchApi';
+import { Mountupdate } from './components/Mountupdate/Mountupdate';
+
 
 
 
@@ -53,7 +55,9 @@ function App() {
 
 {/* <Conditional /> */}
 
-<FetchApi />
+{/* <FetchApi /> */}
+
+<Mountupdate />
 
 
     </div>
