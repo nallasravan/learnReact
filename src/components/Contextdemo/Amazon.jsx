@@ -1,19 +1,22 @@
-import { useState, useContext, createContext } from "react"
+import { useState, useContext, createContext, useEffect } from "react"
+import  axios  from 'axios';
 
 const createSearch = createContext(null)
 
 export const Amazon = () =>{
 
-    const[seartchterm, setSearchterm] = useState("");
-    const[searcvalue, setSearchvalue] = useState("")
+    const[seartchterm, setSearchterm] = useState(""); // valuetyping fetching value
+    const[searcvalue, setSearchvalue] = useState("") // after submit we are fetching 
 
     const handleChange = (e) =>{
-    setSearchterm(e.traget.value)
+    setSearchterm(e.target.value)
 }
 
 const handleClick = () =>{
     setSearchvalue(seartchterm)
 }
+console.log("searcvalue=", searcvalue);
+
     return(
         <div className="container-fluid">
             <nav className="d-flex justify-content-between border boredr-1 p-3 align-items-center">
@@ -40,13 +43,43 @@ const handleClick = () =>{
 }
 
 export const Maincomponent = () =>{
+    
 
-    const provideSearchvalue = useContext(createSearch);
+    const Searchvalue = useContext(createSearch)
 
-    console.log("provideSearchvalue=", provideSearchvalue)
+    console.log("provideSearchvalue=", Searchvalue)
+
+    const[produts, setProducts] = useState([])
+
+    useEffect(()=> {
+        
+        if(!Searchvalue){
+   axios.get("https://fakestoreapi.com/products")
+        .then(res=>setProducts(res.data))
+        }
+        else{
+   axios.get(`https://fakestoreapi.com/products/category/${Searchvalue}`)
+        .then(res=>setProducts(res.data))
+        }
+      
+    },[Searchvalue])
     return(
-        <div>
+        <div className="container-fluid">
+            
+<div className="d-flex flex-wrap">
+  {produts.map((item) => (
+    <div
+      key={item.id} // assuming each item has a unique `id`
+      style={{ width: '500px', height: '200px' }}
+      className="card"
+    >
+      <img src={item.image} alt="image" />
+    </div>
+  ))}
+</div>
+<div>
 
+</div>
         </div>
     )
 } 

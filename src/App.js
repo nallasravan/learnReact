@@ -21,7 +21,8 @@ import Conditional from './components/Controlledcomponents/Conditional';
 import {FetchApi} from './components/FetchApi/FetchApi';
 import { Mountupdate } from './components/Mountupdate/Mountupdate';
 import { ContextDemo } from './components/Contextdemo/ContextDemo';
-// import { Amazon } from './components/Contextdemo/Amazon';
+import { Amazon } from './components/Contextdemo/Amazon';
+
 
 
 
@@ -62,9 +63,10 @@ function App() {
 
 {/* <Mountupdate /> */}
 
-<ContextDemo /> 
+{/* <ContextDemo />  */}
 
-{/* <Amazon /> */}
+<Amazon />
+{/* <UsereducerDemo /> */}
 
 
 
