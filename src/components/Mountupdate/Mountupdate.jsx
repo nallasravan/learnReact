@@ -1,95 +1,104 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
+// Main component that dynamically renders Login, Logout, or Register
+export const Mountupdate = () => {
+  const [component, setComponent] = useState(null);
 
-export const Mountupdate = () =>{
-const[component, setComponent] = useState(null)
-
-
-   function handle(name) {
-      switch(name){
-        case "Login":
-        setComponent(<Login/>);
+  // Handles which component to render based on button click
+  function handle(name) {
+    switch (name) {
+      case "Login":
+        setComponent(<Login />);
         break;
-        case "Logout":
-        setComponent(<Logout/>);
+      case "Logout":
+        setComponent(<Logout />);
         break;
-        case "Register":
-        setComponent(<Register/>);
+      case "Register":
+        setComponent(<Register />);
         break;
-        default:
-            break;
-      }
+      default:
+        break;
     }
+  }
 
-    function login() {
-        handle("Login");
-    }
+  // Button click handlers
+  function login() {
+    handle("Login");
+  }
 
-    function logout() {
-        handle("Logout");
-    }
+  function logout() {
+    handle("Logout");
+  }
 
-    function register() {
-        handle("Register");
-    }
-    return(
+  function register() {
+    handle("Register");
+  }
 
-        <div>
-            <h1>mount update</h1>
-            <button onClick={login} className="btn btn-primary p-2 m-2 fs-3">Login</button>
-            <button onClick={logout}  className="btn btn-primary p-2 m-2 fs-3">Logout</button>
-            <button onClick={register}  className="btn btn-primary p-2 m-2 fs-3">Register</button>
-<hr/>
-            <div>
-{component}
-            </div>
+  return (
+    <div>
+      <h1>Mount Update</h1>
+      <button onClick={login} className="btn btn-primary p-2 m-2 fs-3">
+        Login
+      </button>
+      <button onClick={logout} className="btn btn-primary p-2 m-2 fs-3">
+        Logout
+      </button>
+      <button onClick={register} className="btn btn-primary p-2 m-2 fs-3">
+        Register
+      </button>
+      <hr />
+      <div>{component}</div>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
+// Login Component
+export const Login = () => {
+  useEffect(() => {
+    console.log("login mount"); // Log when Login component is mounted
 
-export const Login = () =>{
-    useEffect(()=>{
-        console.log("login mount")
+    return () => {
+      console.log("login unmount"); // Log when Login component is unmounted
+    };
+  }, []);
 
-        return () =>{
-           console.log("login unmount") 
-        }
+  return (
+    <div>
+      <h1>Login component</h1>
+    </div>
+  );
+};
 
-    },[])
-    return(
-        <div>
-            <h1>Login component</h1>
-        </div>
-    )
-}
-export const Logout = () =>{
-    useEffect(()=>{
-        console.log("Logout mount") // mount phase
+// Logout Component
+export const Logout = () => {
+  useEffect(() => {
+    console.log("Logout mount"); // Log when Logout component is mounted
 
-        return () =>{
-           console.log("Logout unmount")  // unmount or remove phase
-        }
+    return () => {
+      console.log("Logout unmount"); // Log when Logout component is unmounted
+    };
+  }, []);
 
-    },[])
-    return(
-        <div>
-            <h1>Logout component</h1>
-        </div>
-    )
-}
-export const Register = () =>{
-    useEffect(()=>{
-        console.log("Register mount")
+  return (
+    <div>
+      <h1>Logout component</h1>
+    </div>
+  );
+};
 
-        return () =>{
-           console.log("Register unmount") 
-        }
+// Register Component
+export const Register = () => {
+  useEffect(() => {
+    console.log("Register mount"); // Log when Register component is mounted
 
-    },[])
-    return(
-        <div>
-            <h1> Register component</h1>
-        </div>
-    )
-}
+    return () => {
+      console.log("Register unmount"); // Log when Register component is unmounted
+    };
+  }, []);
+
+  return (
+    <div>
+      <h1>Register component</h1>
+    </div>
+  );
+};

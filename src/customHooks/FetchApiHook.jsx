@@ -1,19 +1,16 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+// customHooks/FetchApiHook.js
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-export const useFetch = (url) =>{
-    const[data, setdata] = useState([])
+// Custom Hook
+export const useFetch = (url) => {
+  const [data, setData] = useState([]);
 
-function pageload(url){
+  useEffect(() => {
     axios.get(url)
-    .then(res=>setdata(res.data))
-}
+      .then(res => setData(res.data))
+      .catch(err => console.error("Error fetching data:", err));
+  }, [url]);
 
-useEffect(()=>{
-pageload(url)
-},[url])
-
-
-
-return data
-}
+  return data;
+};

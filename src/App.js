@@ -17,11 +17,12 @@ import Forms from './components/Forms/Form';
 import Formvalidation from './components/Forms/Formvalidation';
 import Formfocusout from './components/Forms/formvalidationfocusout';
 import Parent from './components/Controlledcomponents/Parent';
-import Conditional from './components/Controlledcomponents/Conditional';
+
 import {FetchApi} from './components/FetchApi/FetchApi';
 import { Mountupdate } from './components/Mountupdate/Mountupdate';
 import { ContextDemo } from './components/Contextdemo/ContextDemo';
 import { Amazon } from './components/Contextdemo/Amazon';
+import { UsereducerDemo } from './components/Usereducer-demo/UsereducerDemo';
 
 
 
@@ -53,7 +54,7 @@ function App() {
 {/* <Forms /> */}
 
 {/* <Formvalidation /> */}
-{/* <Formfocusout /> */}
+<Formfocusout />
 
 {/* <Parent /> */}
 
@@ -65,8 +66,8 @@ function App() {
 
 {/* <ContextDemo />  */}
 
-<Amazon />
-{/* <UsereducerDemo /> */}
+{/* <Amazon /> */}
+{/* <UsereducerDemo/> */}
 
 
 
