@@ -54,7 +54,7 @@ function App() {
 {/* <Forms /> */}
 
 {/* <Formvalidation /> */}
-<Formfocusout />
+{/* <Formfocusout /> */}
 
 {/* <Parent /> */}
 
@@ -67,7 +67,7 @@ function App() {
 {/* <ContextDemo />  */}
 
 {/* <Amazon /> */}
-{/* <UsereducerDemo/> */}
+<UsereducerDemo/>
 
 
 

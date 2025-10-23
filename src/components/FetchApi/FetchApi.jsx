@@ -7,7 +7,7 @@ export const FetchApi = () => {
 
   return (
     <div>
-      <h2>fetchap</h2>
+      <h2>fetchapi</h2>
       <ul>
         {codefrom.map((item) => (
           <li key={item.id}>{item.id}: {item.title}</li>
