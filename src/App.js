@@ -23,6 +23,7 @@ import { Mountupdate } from './components/Mountupdate/Mountupdate';
 import { ContextDemo } from './components/Contextdemo/ContextDemo';
 import { Amazon } from './components/Contextdemo/Amazon';
 import { UsereducerDemo } from './components/Usereducer-demo/UsereducerDemo';
+import ProductList from './components/Promice/ProductList';
 
 
 
@@ -67,7 +68,8 @@ function App() {
 {/* <ContextDemo />  */}
 
 {/* <Amazon /> */}
-<UsereducerDemo/>
+{/* <UsereducerDemo/> */}
+<ProductList />
 
 
 
