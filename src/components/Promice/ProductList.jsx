@@ -4,10 +4,10 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchProducts =  () => {
+    const fetchProducts = async () => {
       try {
-        const response =  fetch("https://fakestoreapi.com/products");
-        const data = response.json();
+        const response = await fetch("https://fakestoreapi.com/products");
+        const data = await response.json();
         setProducts(data);
       } catch (error) {
         console.error("Error fetching products:", error);
