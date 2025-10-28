@@ -1,28 +1,33 @@
-import { useState } from "react";
+
 import Child from "./Child";
-
 const Parent = () => {
-  const [array, setArray] = useState(["shravan", "abhi", "ram"]);
-  const [cardname, setCardname] = useState("bathroom");
-
-  // Function to update cardname
-  const changeCardName = () => {
-    setCardname("kitchen");
-  };
-
   return (
     <div>
       <div className="container">
         <h1>Parent Component</h1>
+        <ul>
+          <li>React: You describe what you want to render.
+</li>
+          <li>Vanilla JS: You write how to render it (manipulating DOM step-by-step).</li>
+        </ul>
         <hr />
-        <button onClick={changeCardName}>Change Card Name</button>
-
         <Child
           backgroundColor="red"
-          cardheader={cardname}
+          cardheader="bathroom"
           cardbndy="Toilet.png"
           cardfooter="explore"
-          produts={array}
+        />
+         <Child
+          backgroundColor="blue"
+          cardheader="faucets"
+          cardbndy="Faucets.png"
+          cardfooter="explore"
+        />
+          <Child
+          backgroundColor="yellow"
+          cardheader="faucets"
+          cardbndy="Faucets.png"
+          cardfooter="explore"
         />
       </div>
     </div>

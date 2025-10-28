@@ -20,13 +20,7 @@ const Child = (props) => {
         </div>
       </div>
       <hr />
-      <div>
-        <ul>
-          {props.produts.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </div>
+   
     </div>
   );
 };

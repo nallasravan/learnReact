@@ -22,8 +22,15 @@ import {FetchApi} from './components/FetchApi/FetchApi';
 import { Mountupdate } from './components/Mountupdate/Mountupdate';
 import { ContextDemo } from './components/Contextdemo/ContextDemo';
 import { Amazon } from './components/Contextdemo/Amazon';
-import { UsereducerDemo } from './components/Usereducer-demo/UsereducerDemo';
+import { UsereducerDemo } from './components/Usereducer-demo';
 import ProductList from './components/Promice/ProductList';
+
+import  ReduxComponent  from './components/redux/ReduxComponent';
+import { Provider } from 'react-redux'
+import store from './components/redux/Store';
+import ReduxLeranComponent from './components/Reduxlearn/ReduxLeranComponent';
+
+
 
 
 
@@ -59,17 +66,19 @@ function App() {
 
 {/* <Parent /> */}
 
-{/* <Conditional /> */}
 
-{/* <FetchApi /> */}
-
-{/* <Mountupdate /> */}
 
 {/* <ContextDemo />  */}
 
-{/* <Amazon /> */}
-{/* <UsereducerDemo/> */}
-<ProductList />
+
+<UsereducerDemo/>
+{/* <Type />   */}
+{/* <Provider store={store}>
+<ReduxComponent />
+</Provider> */}
+
+{/* <ReduxLeranComponent /> */}
+
 
 
 
