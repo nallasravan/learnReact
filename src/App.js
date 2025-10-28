@@ -46,7 +46,7 @@ function App() {
 {/* <Onewaybinding /> */}
 {/* <Usestate /> */}
 {/* <Twowaybinding /> */}
-<Useref />
+{/* <Useref /> */}
 {/* < Settime /> */}
 {/* < SetInterval/> */}
 {/* <Debounce /> */}  
@@ -77,7 +77,7 @@ function App() {
 <ReduxComponent />
 </Provider> */}
 
-{/* <ReduxLeranComponent /> */}
+<ReduxLeranComponent />
 
 
 
