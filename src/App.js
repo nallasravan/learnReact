@@ -8,7 +8,7 @@ import Onewaybinding from './components/Onewaybinding/Onewaybinding';
 import Twowaybinding from './components/Twowaybinding/Twowaybinding';
 import Settime from './components/useEffect/Settime';
 import SetInterval from './components/Useref/SetInterval';
-import Useref from './components/Useref/Useref';
+import Useref from './components/Useref';
 import Usestate from './components/Usestate/Usestate';
 import CarouselDemoHooks from './components/Debounce/CarouselDemoHooks';
 import DemouseEffect from './components/component/DemouseEffect/DemouseEffect';
@@ -46,7 +46,7 @@ function App() {
 {/* <Onewaybinding /> */}
 {/* <Usestate /> */}
 {/* <Twowaybinding /> */}
-{/* <Useref /> */}
+<Useref />
 {/* < Settime /> */}
 {/* < SetInterval/> */}
 {/* <Debounce /> */}  
@@ -71,7 +71,7 @@ function App() {
 {/* <ContextDemo />  */}
 
 
-<UsereducerDemo/>
+{/* <UsereducerDemo/> */}
 {/* <Type />   */}
 {/* <Provider store={store}>
 <ReduxComponent />

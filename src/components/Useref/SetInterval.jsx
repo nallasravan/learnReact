@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import Useref from "./Useref";
+import Useref from ".";
 
 const SetInterval = () => {
     const [product, setProduct] = useState({});
