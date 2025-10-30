@@ -1,12 +1,13 @@
 import {Buy_Toilet} from "./ActionType"
 
 const initialState ={
-    numberOfToilets : 20
+    numberOfToilets : 20,
+  
 }
 
 const Toiletreducer = (state = initialState, action) =>{
-
-    console.log(action.type)
+debugger
+    console.log(action.type);
     console.log(state)
     
     switch(action.type){
