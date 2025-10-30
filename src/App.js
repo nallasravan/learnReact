@@ -27,7 +27,8 @@ import ProductList from './components/Promice/ProductList';
 
 import  ReduxComponent  from './components/redux/ReduxComponent';
 import { Provider } from 'react-redux'
-import store from './components/redux/Store';
+
+import store from "./components/Reduxlearn/store"
 import ReduxLeranComponent from './components/Reduxlearn/ReduxLeranComponent';
 
 
@@ -76,8 +77,9 @@ function App() {
 {/* <Provider store={store}>
 <ReduxComponent />
 </Provider> */}
-
+<Provider store={store}>
 <ReduxLeranComponent />
+</Provider>
 
 
 

@@ -1,7 +1,8 @@
-import Buy_Toilet from "./ActionType"
+import {Buy_Toilet} from "./ActionType"
 
 
-export const ActionToilet = () =>{
+export  const ActionToilet = () =>{
+
 return{
     type: Buy_Toilet
 }
