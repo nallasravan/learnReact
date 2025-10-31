@@ -1,92 +1,35 @@
-
-import { Form } from 'formik';
-import './App.css';
-import Component from './components/component/Component';
-import CaroselDemo from './components/Debounce/CarouselDemo';
-import Debounce from './components/Debounce/Debounce';
-import Onewaybinding from './components/Onewaybinding/Onewaybinding';
-import Twowaybinding from './components/Twowaybinding/Twowaybinding';
-import Settime from './components/useEffect/Settime';
-import SetInterval from './components/Useref/SetInterval';
-import Useref from './components/Useref';
-import Usestate from './components/Usestate/Usestate';
-import CarouselDemoHooks from './components/Debounce/CarouselDemoHooks';
-import DemouseEffect from './components/component/DemouseEffect/DemouseEffect';
-import ExampleComponent from './components/ExampleDemo/ExampleComponent';
-import Forms from './components/Forms/Form';
-import Formvalidation from './components/Forms/Formvalidation';
-import Formfocusout from './components/Forms/formvalidationfocusout';
-import Parent from './components/Controlledcomponents/Parent';
-
-import {FetchApi} from './components/FetchApi/FetchApi';
-import { Mountupdate } from './components/Mountupdate/Mountupdate';
-import { ContextDemo } from './components/Contextdemo/ContextDemo';
-import { Amazon } from './components/Contextdemo/Amazon';
-import { UsereducerDemo } from './components/Usereducer-demo';
-import ProductList from './components/Promice/ProductList';
-
-import  ReduxComponent  from './components/redux/ReduxComponent';
-import { Provider } from 'react-redux'
-
-import store from "./components/Reduxlearn/store"
-import ReduxLeranComponent from './components/Reduxlearn/ReduxLeranComponent';
-
-
-
-
-
+// src/App.js
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
 
 
 
 
 function App() {
+  const user = useSelector(state => state.user);
+
   return (
-    <div className="App">
-{/* <Component />
-<Component /> */}
-{/* <Onewaybinding /> */}
-{/* <Usestate /> */}
-{/* <Twowaybinding /> */}
-{/* <Useref /> */}
-{/* < Settime /> */}
-{/* < SetInterval/> */}
-{/* <Debounce /> */}  
-{/* <CaroselDemo /> */}
-{/* <RecatForm /> */}
-{/* <RecatFormValidation /> */}
-{/* <CarouselDemoHooks /> */}
-{/* < DemouseEffect /> */}
-{/* <ExampleComponent />
-{/* <Getapi /> */}
-{/* <Focusout /> */}
+    <div style={{ padding: 20, fontFamily: 'Arial, sans-serif' }}>
+      <h1>Redux Todo App</h1>
 
-{/* <Forms /> */}
-
-{/* <Formvalidation /> */}
-{/* <Formfocusout /> */}
-
-{/* <Parent /> */}
-
-
-
-{/* <ContextDemo />  */}
-
-
-{/* <UsereducerDemo/> */}
-{/* <Type />   */}
-{/* <Provider store={store}>
-<ReduxComponent />
-</Provider> */}
-<Provider store={store}>
-<ReduxLeranComponent />
-</Provider>
-
-
-
-
-
+      {user ? (
+        <>
+          <Logout />
+          <hr />
+          <h3>Add Todo</h3>
+          <TodoInput />
+          <hr />
+          <h3>Your Todos</h3>
+<TodoList/>
+        </>
+      ) : (
+        <Login />
+      )}
     </div>
-    
   );
 }
 
