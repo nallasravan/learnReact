@@ -1,9 +1,10 @@
 // ChildOfCallback.js
 import React from "react";
 
-const ChildOfCallback = React.memo(({ onIncrement }) => {
-    console.log("onIncrement==", onIncrement)
+const ChildOfCallback = ({ onIncrement }) => {
   console.log("Child rendered!");
+
+  
 
   return (
     <div>
@@ -11,6 +12,6 @@ const ChildOfCallback = React.memo(({ onIncrement }) => {
       <button onClick={onIncrement}>Increment from Child</button>
     </div>
   );
-});
+};
 
-export default ChildOfCallback;
+export default React.memo(ChildOfCallback);
