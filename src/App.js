@@ -6,6 +6,9 @@ import Logout from './components/Logout';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 import Callback from './components/PerfomanceOptimize/Callback';
+import ExpensiveComponent from './components/Memo/ExpensiveComponent';
+import ExpensiveComponentWithoutMemo from './components/Memo/ExpensiveComponentWithoutMemo';
+import ReducerDemo from './components/ReducerDemo/ReducerDemo';
 
 
 
@@ -15,7 +18,10 @@ function App() {
 
   return (
     <div>
-      <Callback />
+      {/* <Callback /> */}
+      {/* <ExpensiveComponent /> */}
+      <ReducerDemo/>
+      {/* <ExpensiveComponentWithoutMemo /> */}
     </div>
 //     <div style={{ padding: 20, fontFamily: 'Arial, sans-serif' }}>
 //       <h1>Redux Todo App</h1>
