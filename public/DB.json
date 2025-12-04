@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Shravan Doe",
+      "email": "sra1reddyn@gmail.com",
+      "password": "Shreyansh@123"
+    },
+    {
+      "id": 2,
+      "name": "pavan Doe",
+      "email": "pa1reddyn@gmail.com",
+      "password": "Pavan@123"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "userId": "shravan",
+      "date": "2024-07-01",
+      "time": "10:00 AM",
+      "description": "Dentist appointment"
+    },
+    {
+      "id": 2,
+      "userId": "pavan",
+      "date": "2024-07-02",
+      "time": "02:00 PM",
+      "description": "Meeting with client"
+    },
+    {
+      "id": 3,
+      "userId": "shreyansh",
+      "date": "2024-07-03",
+      "time": "03:00 PM",
+      "description": "Meeting with friend"
+    }
+  ]
+}
